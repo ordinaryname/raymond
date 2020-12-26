@@ -1,0 +1,175 @@
+.body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #eeeeee;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0px;
+  display: inline-block;
+  background-color: #eeeeee;
+  border-bottom: #dddddd solid 2px;
+}
+
+.homepage-link {
+  width: 50%;
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.home-link {
+  margin-left: 25%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555555;
+  background-color: #efefef;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: #077077;
+  text-decoration: none;
+}
+
+.menu {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.header-menu {
+  margin: 0 25% 0 0;
+  padding: 0;
+  display: inline;
+  float: right;
+  list-style-type: none;
+}
+
+.menu-item {
+  text-decoration: none;
+  float: right;
+  padding: 0px 20px;
+}
+
+.menu-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #555555;
+}
+
+.menu-link:hover {
+  color: #077077;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-menu{
+  max-height: 250px;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  padding: 8px;
+}
+
+.project-menu-item{
+  width: 100%;
+  font-size: 20px;
+  padding: 8px;
+  background-color: #f5f5f5;
+  color: #555555;
+  border-bottom: #dddddd solid 2px;
+  text-decoration: none;
+}
+
+.project-menu-item:hover{
+  background-color: #dddddd;
+  color: white;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* Content */
+
+.content {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Title */
+
+.ml16 {
+  color: #402d2d;
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+  margin: 10vh 0;
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+/* Socials */
+
+.social-icons {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instagram, .stackoverflow, .github {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+  width: 70px;
+  height: 70px;
+  padding: 15px;
+  background-color: none;
+  z-index: 3;
+  position: relative;
+  border-radius: 35px;
+  border: none;
+}
+
+.instagram_thumbnail, .stackoverflow_thumbnail, .github_thumbnail {
+  display: inline-block;
+  vertical-align: top;
+  width: 25vw;
+  height: 20vw;
+  margin: 0px 1vw;
+  padding: 0;
+  background-color: none;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  transition: top 0.3s;
+}
+
+.instagram_thumbnail:hover, .stackoverflow_thumbnail:hover, .github_thumbnail:hover {
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+}
+
+img {
+  height: calc(20vw - 40px);
+  position: relative;
+  z-index: 2;
+}
