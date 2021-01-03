@@ -58,7 +58,7 @@ class Home extends React.Component {
             top: position_y,
             left: position_x
           }}>
-          <Link to="/TicTacToe"><a href="" className="project-menu-item">Tic Tac Toe Plus</a></Link>
+          <Link to="/TicTacToe"><p className="project-menu-item">Tic Tac Toe Plus</p></Link>
         </div>
     );
   }
@@ -74,7 +74,7 @@ class Home extends React.Component {
       }}>
         <header className="header" ref={(element) => {this.header = element;}}>
           <div className="homepage-link">
-            <a href="https://raymondmutyaba.com" className="home-link">Raymond</a>
+            <a href="/" className="home-link">Raymond</a>
           </div>
           <div className="menu">
             <ul className="header-menu">
@@ -97,7 +97,7 @@ class Home extends React.Component {
                 <path d="M40.4,98.58c0,.5-.56.91-1.28.92s-1.3-.38-1.31-.88.56-.91,1.29-.92,1.3.39,1.3.88Z" fill="#191717"/>
                 <path d="M45,97.8c.09.49-.41,1-1.12,1.12s-1.35-.17-1.44-.66.42-1,1.12-1.12,1.35.17,1.44.66Z" fill="#191717"/>
               </svg>
-              <img src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/github_screenshot_thumbnail.png"/>
+              <img src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/github_screenshot_thumbnail.png" alt="github website screenshot"/>
             </div>
             <div href="https://www.instagram.com/raymondmutyaba/" className="instagram_thumbnail" onMouseEnter={() => this.setState({backgroundColor:'#eeaeae'})} onMouseLeave={() => this.setState({backgroundColor:'#eeeeee'})}>
               <svg className="instagram" viewBox="0 0 503.84 503.84" style={{backgroundColor: this.state.backgroundColor}}>
@@ -105,14 +105,14 @@ class Home extends React.Component {
                 <path d="M256,126.64A129.36,129.36,0,1,0,385.36,256,129.35,129.35,0,0,0,256,126.64ZM256,340a84,84,0,1,1,84-84A84,84,0,0,1,256,340Z" transform="translate(-4.08 -4.08)"/>
                 <circle cx="386.4" cy="117.44" r="30.23"/>
               </svg>
-              <img src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/intercontinental_la_downtown_suite_night_thumbnail.jpg"/>
+              <img src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/intercontinental_la_downtown_suite_night_thumbnail.jpg" alt="intercontinental downtown los angeles hotel suite"/>
             </div>
             <div href="https://stackoverflow.com/users/5563191/raymond-mutyaba" className="stackoverflow_thumbnail" onMouseEnter={() => this.setState({backgroundColor:'#eaeeae'})} onMouseLeave={() => this.setState({backgroundColor:'#eeeeee'})}>
               <svg className="stackoverflow" viewBox="0 0 120 120" style={{backgroundColor: this.state.backgroundColor}}>
                 <path fill="#bcbbbb" d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z"/>
                 <path fill="#f48023" d="M38.8 68.4l37.8 7.9 1.6-7.6-37.8-7.9-1.6 7.6zm5-18l35 16.3 3.2-7-35-16.4-3.2 7.1zm9.7-17.2l29.7 24.7 4.9-5.9-29.7-24.7-4.9 5.9zm19.2-18.3l-6.2 4.6 23 31 6.2-4.6-23-31zM38 86h38.6v-7.7H38V86z"/>
               </svg>
-              <img src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/stackoverflow_screenshot_thumbnail.png"/>
+              <img src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/stackoverflow_screenshot_thumbnail.png" alt="stackoverflow website screenshot"/>
             </div>
           </div>
         </div>

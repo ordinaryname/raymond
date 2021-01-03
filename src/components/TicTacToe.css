@@ -7,6 +7,100 @@ body{
   background-color: #f8f8f8;
 }
 
+/* Header */
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0px;
+  display: inline-block;
+  background-color: #eeeeee;
+  border-bottom: #dddddd solid 2px;
+}
+
+.homepage-link {
+  width: 50%;
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.home-link {
+  margin-left: 25%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555555;
+  background-color: #efefef;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: #077077;
+  text-decoration: none;
+}
+
+.menu {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.header-menu {
+  margin: 0 25% 0 0;
+  padding: 0;
+  display: inline;
+  float: right;
+  list-style-type: none;
+}
+
+.menu-item {
+  text-decoration: none;
+  float: right;
+  padding: 0px 20px;
+}
+
+.menu-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #555555;
+}
+
+.menu-link:hover {
+  color: #077077;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-menu{
+  max-height: 250px;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  padding: 8px;
+}
+
+.project-menu-item{
+  width: 100%;
+  font-size: 20px;
+  padding: 8px;
+  background-color: #f5f5f5;
+  color: #555555;
+  border-bottom: #dddddd solid 2px;
+  text-decoration: none;
+}
+
+.project-menu-item:hover{
+  background-color: #dddddd;
+  color: white;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
 /*Scoreboard*/
 
 .togglePlayer{
@@ -197,47 +291,47 @@ body{
 .active:hover .cell:hover{
   cursor: pointer;
 }
-.cell1{
+.cell0{
   grid-area: 1 / 1 / 2 / 2;
   justify-self: center;
   align-self: center;
 }
-.cell2{
+.cell1{
   grid-area: 1 / 2 / 2 / 3;
   justify-self: center;
   align-self: center;
 }
-.cell3{
+.cell2{
   grid-area: 1 / 3 / 2 / 4;
   justify-self: center;
   align-self: center;
 }
-.cell4{
+.cell3{
   grid-area: 2 / 1 / 3 / 2;
   justify-self: center;
   align-self: center;
 }
-.cell5{
+.cell4{
   grid-area: 2 / 2 / 3 / 3;
   justify-self: center;
   align-self: center;
 }
-.cell6{
+.cell5{
   grid-area: 2 / 3 / 3 / 4;
   justify-self: center;
   align-self: center;
 }
-.cell7{
+.cell6{
   grid-area: 3 / 1 / 4 / 2;
   justify-self: center;
   align-self: center;
 }
-.cell8{
+.cell7{
   grid-area: 3 / 2 / 4 / 3;
   justify-self: center;
   align-self: center;
 }
-.cell9{
+.cell8{
   grid-area: 3 / 3 / 4 / 4;
   justify-self: center;
   align-self: center;
