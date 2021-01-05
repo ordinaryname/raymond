@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import '../App.css';
 import './TicTacToe.css'
 import anime from 'animejs';
 
@@ -58,17 +59,17 @@ class TicTacToe extends Component {
   }
 
   projectMenuHTML = () => {
-    let position_x = this.projectLink.getBoundingClientRect().x
-    let position_y = this.header.getBoundingClientRect().height
+    let position_x = this.projectLink.getBoundingClientRect().x;
+    let position_y = this.header.getBoundingClientRect().height + 6;
     return(
         <div
           className="project-menu"
           ref={(element) => {this.projectMenu = element;}}
           style={{
             top: position_y,
-            left: position_x
+            left: position_x,
           }}>
-          <Link to="/TicTacToe"><p className="project-menu-item">Tic Tac Toe Plus</p></Link>
+          <Link className="project-menu-item" to="/TicTacToe">{'Tic Tac Toe Plus'}</Link>
         </div>
     );
   }
@@ -349,11 +350,12 @@ class TicTacToe extends Component {
       <div className="Home">
         <header className="header" ref={(element) => {this.header = element;}}>
           <div className="homepage-link">
-            <a href="/" className="home-link">Raymond</a>
+            <a href="/" className="home-link menu-link">Raymond</a>
           </div>
           <div className="menu">
             <ul className="header-menu">
-              <li className="menu-item menu-link" onClick={this.showProjectMenu} ref={(element) => {this.projectLink = element;}}>Projects</li>
+              <li className="menu-item menu-link" onClick={this.showProjectMenu} ref={(element) => {this.projectLink = element;}}>{'Projects'}</li>
+              <li className="menu-item menu-link"><a className="menu-link" href="https://github.com/ordinaryname">{'Github'}</a></li>
             </ul>
           </div>
         </header>
@@ -385,11 +387,10 @@ class TicTacToe extends Component {
             </div>
           </div>
         </div>
-        {/*
         <div className="footer">
-          <div className="footerText">&#169; <a href="https://raymondmutyaba.com/" className="copyrightText">Raymond Mutyaba</a> 2019</div>
+          <div className="footer-item">Raymond Mutyaba</div>
+          <div className="footer-item">Icons made by <a className="footer-link" href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a className="footer-link" href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></div>
         </div>
-        */}
       </div>
     );
   }
