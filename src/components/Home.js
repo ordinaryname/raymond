@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import '../App.css';
 import './Home.css';
+import profile_image from './images/raymond_selfie.jpg';
 import anime from 'animejs';
 
 class Home extends React.Component {
@@ -123,7 +124,10 @@ class Home extends React.Component {
         </header>
         {this.state.showProjectMenu?(this.projectMenuHTML()):(null)}
         <div className="content">
-          <h1 className="ml16">Raymond Is Coding</h1>
+          <div className="title">
+            <p className="ml16">Raymond Is Coding</p>
+            <div className="vertical-align"><img className="profile_image" src={profile_image} alt="profile"/></div>
+          </div>
           <section className="section firstSection">
             {this.placeholderHtml()}
             <div className="section-item">

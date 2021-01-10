@@ -1,6 +1,23 @@
-.title {
+.error-title {
   color: #555555;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 1.5em;
+  font-size: 2em;
+  text-align: center;
+  margin: 8vh 0;
+  width: 100vw;
+}
+
+.lion_img_container {
+  width: 100vw;
+  text-align: center;
+}
+
+.error_img {
+  width: 50vw;
+  height: 50vw;
+}
+
+a:hover {
+  cursor: pointer;
 }
