@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import '../App.css';
 import './TicTacToe.css'
+import Header from './Header';
+import Footer from './Footer';
 import anime from 'animejs';
 
 class TicTacToe extends Component {
@@ -22,7 +23,6 @@ class TicTacToe extends Component {
   initialState = () => {
     // Reset state when game ends
     return {
-      showProjectMenu: false,
       player: "x",
       playersTurn: true,
       errorMsg: "",
@@ -38,40 +38,6 @@ class TicTacToe extends Component {
     groups[7] = [[-9, -18], [9, 18], [8, 16], [-1, -2], [-10, -20], [-9, 9], [-8, 8], [1, -1], [10, -10]];
     groups[8] = [[-9, -18], [9, 18], [8, 16], [-1, -2], [-10, -20], [-9, 9]];
     return groups;
-  }
-
-  componentDidMount() {
-    document.addEventListener('click', this.closeProjectMenu);
-  }
-
-  showProjectMenu = (event) => {
-    this.setState(state => ({
-      showProjectMenu: !state.showProjectMenu
-    }));
-  }
-
-  closeProjectMenu = (event) => {
-    try {
-      if (!this.projectMenu.contains(event.target) & !this.projectLink.contains(event.target)) {
-        this.setState({showProjectMenu:false});
-      }
-    } catch(err) {}
-  }
-
-  projectMenuHTML = () => {
-    let position_x = this.projectLink.getBoundingClientRect().x;
-    let position_y = this.header.getBoundingClientRect().height + 6;
-    return(
-        <div
-          className="project-menu"
-          ref={(element) => {this.projectMenu = element;}}
-          style={{
-            top: position_y,
-            left: position_x,
-          }}>
-          <Link className="project-menu-item" to="/TicTacToe">{'Tic Tac Toe Plus'}</Link>
-        </div>
-    );
   }
 
   anime = (box1, box2, box3) => {
@@ -348,18 +314,7 @@ class TicTacToe extends Component {
   render() {
     return(
       <div className="Home">
-        <header className="header" ref={(element) => {this.header = element;}}>
-          <div className="homepage-link">
-            <a href="/" className="home-link menu-link">Raymond</a>
-          </div>
-          <div className="menu">
-            <ul className="header-menu">
-              <li className="menu-item menu-link" onClick={this.showProjectMenu} ref={(element) => {this.projectLink = element;}}>{'Projects'}</li>
-              <li className="menu-item menu-link"><a className="menu-link" href="https://github.com/ordinaryname">{'Github'}</a></li>
-            </ul>
-          </div>
-        </header>
-        {this.state.showProjectMenu?(this.projectMenuHTML()):(null)}
+        <Header/>
         <div className="box">
           <div className="gameOverPanel" ref={(element) => {this.gameOverPanel = element;}}>
           {/* Show game over menu after turn 80 */}
@@ -387,10 +342,7 @@ class TicTacToe extends Component {
             </div>
           </div>
         </div>
-        <div className="footer">
-          <div className="footer-item">Raymond Mutyaba</div>
-          <div className="footer-item">Icons made by <a className="footer-link" href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a className="footer-link" href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></div>
-        </div>
+        <Footer/>
       </div>
     );
   }

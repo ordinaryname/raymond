@@ -1,18 +1,20 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: arial;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* Header */
 
 .header {
+  position: fixed;
+  top: 0px;
+  z-index: 4;
   width: 100%;
   margin: 0;
   padding: 20px 0px;
   display: inline-block;
-  background-color: #eeeeee;
-  border-bottom: #dddddd solid 2px;
+  background-color: var(--header-section-color);
 }
 
 .homepage-link {
@@ -26,7 +28,7 @@
 .home-link {
   margin-left: 25%;
   font-weight: bold;
-  color: #555555;
+  color: white;
 }
 
 .menu {
@@ -47,14 +49,12 @@
 .menu-item {
   float: right;
   padding: 0px 20px;
-  color: #555555;
-  font-size: 20px;
 }
 
 .menu-link {
   text-decoration: none;
-  color: #555555;
-  font-size: 20px;
+  color: white;
+  font-size: 1.1em;
 }
 
 .menu-link:hover {
@@ -63,26 +63,23 @@
 }
 
 .project-menu{
-  position: absolute;
+  position: fixed;
   display: block;
   z-index: 1;
 }
 
 .project-menu-item{
   width: 100%;
-  font-size: 20px;
+  font-size: 1.1em;
   padding: 8px;
-  background-color: #eeeeee;
-  color: #555555;
-  border-bottom: #dddddd solid 2px;
-  border-left: #dddddd solid 2px;
-  border-right: #dddddd solid 2px;
+  background-color: var(--header-section-color);
+  color: white;
   text-decoration: none;
 }
 
 .project-menu-item:hover{
-  background-color: #dddddd;
-  color: white;
+  background-color: white;
+  color: #555555;
   cursor: pointer;
 }
 

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import '../App.css';
 import './Home.css';
+import Header from './Header';
+import Footer from './Footer';
 import profile_image from './images/raymond_selfie.jpg';
 import anime from 'animejs';
 
@@ -9,7 +10,6 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showProjectMenu:false,
       backgroundColor: '#f5f6f8',
       actionBackground: 'rgb(0,0,255)',
       actionText: 'Hire Me',
@@ -19,7 +19,6 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('click', this.closeProjectMenu);
     window.addEventListener('scroll', this.changeActionButtonBackground);
     // Wrap every letter in a span
     var textWrapper = document.querySelector('.ml16');
@@ -39,36 +38,6 @@ class Home extends React.Component {
     this.setState = (state, callback) => {
       return;
     };
-  }
-
-  showProjectMenu = (event) => {
-    this.setState(state => ({
-      showProjectMenu: !state.showProjectMenu
-    }));
-  }
-
-  closeProjectMenu = (event) => {
-    try {
-      if (!this.projectMenu.contains(event.target) & !this.projectLink.contains(event.target)) {
-        this.setState({showProjectMenu:false});
-      }
-    } catch(err) {}
-  }
-
-  projectMenuHTML = () => {
-    let position_x = this.projectLink.getBoundingClientRect().x;
-    let position_y = this.header.getBoundingClientRect().height + 6;
-    return(
-        <div
-          className="project-menu"
-          ref={(element) => {this.projectMenu = element;}}
-          style={{
-            top: position_y,
-            left: position_x,
-          }}>
-          <Link className="project-menu-item" to="/TicTacToe">{'Tic Tac Toe Plus'}</Link>
-        </div>
-    );
   }
 
   action = (event) => {
@@ -111,25 +80,19 @@ class Home extends React.Component {
       <div className="body" style={{
         backgroundColor: this.state.backgroundColor
       }}>
-        <header className="header" ref={(element) => {this.header = element;}}>
-          <div className="homepage-link">
-            <a href="/" className="home-link menu-link">Raymond</a>
-          </div>
-          <div className="menu">
-            <ul className="header-menu">
-              <li className="menu-item menu-link" onClick={this.showProjectMenu} ref={(element) => {this.projectLink = element;}}>Projects</li>
-              <li className="menu-item menu-link"><a className="menu-link" href="https://github.com/ordinaryname">Github</a></li>
-            </ul>
-          </div>
-        </header>
-        {this.state.showProjectMenu?(this.projectMenuHTML()):(null)}
+        <Header/>
         <div className="content">
           <div className="title">
             <p className="ml16">Raymond Is Coding</p>
             <div className="vertical-align"><img className="profile_image" src={profile_image} alt="profile"/></div>
           </div>
           <section className="section firstSection">
-            {this.placeholderHtml()}
+            <div className="section-item">
+              <svg className="bookIcon" viewBox="0 0 45.22 45.22">
+                <path d="M40.335,5.811H28.886c-2.586,0-4.878,1.281-6.275,3.242c-1.397-1.961-3.689-3.242-6.275-3.242h-2.591V8.78h2.591c2.605,0,4.706,2.086,4.706,4.691v15.265c0,2.598-2.095,4.734-4.693,4.734H4.887c-1.039,0-1.917-0.868-1.917-1.907V10.63c0-0.646,0.339-1.205,0.848-1.534V5.928C1.612,6.408,0,8.318,0,10.63l0.085,25.803c0,1.863,1.475,3.4,3.336,3.4h15.287c0.057,1.103,0.971,1.951,2.089,1.951h3.75c1.12,0,2.033-0.849,2.09-1.951h15.162c1.861,0,3.336-1.537,3.336-3.4L45.22,10.63C45.222,7.95,43.015,5.811,40.335,5.811z M42.252,31.563c0,1.039-0.878,1.907-1.917,1.907H28.873c-2.598,0-4.692-2.137-4.692-4.734V13.471c0-2.605,2.101-4.691,4.706-4.691h11.449c1.039,0,1.917,0.812,1.917,1.851L42.252,31.563L42.252,31.563z"/>
+                <path d="M6.219,15.26c0.085,0.034,0.181,0.051,0.27,0.051c0.185,0,0.369-0.074,0.504-0.211l1.282-1.316c0.131-0.135,0.313-0.211,0.5-0.211c0.188,0,0.369,0.076,0.5,0.211l1.28,1.316c0.135,0.137,0.315,0.211,0.5,0.211c0.087,0,0.198-0.017,0.282-0.051c0.263-0.107,0.456-0.362,0.456-0.646V4.695c0-0.697-0.606-1.26-1.303-1.26H7.06c-0.696,0-1.292,0.563-1.292,1.26v9.919C5.769,14.898,5.957,15.153,6.219,15.26z"/>
+              </svg>
+            </div>
             <div className="section-item">
               <div className="checklist">
                 <div className="checklist-item"><div className="checklist-text">{this.check_mark()}<p className="text"> React JS, Node JS, ExpressJS, Mongo DB</p></div></div>
@@ -143,8 +106,12 @@ class Home extends React.Component {
             <img className="stackoverflow_activity" src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/stackoverflow_activity.png" alt="stackoverflow activity" />
           </section>
           <section className="section firstSection">
-            {this.placeholderHtml()}
-            {this.placeholderHtml()}
+            <div className="section-item">
+              <div className="project-section">
+                <span className="project-title">TicTacToe</span>
+                <img className="project-image" src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/TicTacToe_Screenshot.png" alt="tic tac toe project screenshot"/>
+              </div>
+            </div>
           </section>
           <div className="social-icons">
             <div href="https://github.com/ordinaryname" className="github_thumbnail">
@@ -178,10 +145,7 @@ class Home extends React.Component {
           </div>
         </div>
         <button className="action" onClick={this.action} style={{backgroundColor:this.state.actionBackground}}>{this.state.actionText}</button>
-        <div className="footer">
-          <div className="footer-item">Raymond Mutyaba</div>
-          <div className="footer-item">Icons made by <a className="footer-link" href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a className="footer-link" href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></div>
-        </div>
+        <Footer/>
       </div>
     )
   }

@@ -1,19 +1,26 @@
+:root {
+  --header-section-color: #262c3c;
+  --top-section-color: #333a50;
+  --section-one-color: #cccccc;
+}
+
 /* Content */
 
 .content {
   text-align: center;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: calc(40px + 1.1em) 0 0 0;
 }
 
 /* Title */
 
 .title {
+  background-color: var(--top-section-color);
+  padding: 10vh 0;
 }
 
 .ml16 {
-  color: #402d2d;
+  color: white;
   padding: 40px 0;
   font-weight: 800;
   font-size: 2em;
@@ -55,7 +62,7 @@ section {
 }
 
 .firstSection {
-  background: linear-gradient(0deg, #eeeeee, #cccccc 5% 95%, #eeeeee);
+  background: linear-gradient(0deg, #eeeeee, var(--section-one-color) 5% 95%, #eeeeee);
 }
 
 .secondSection {
@@ -69,6 +76,12 @@ section {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+}
+
+.bookIcon {
+  fill: #583415;
+  width: 15vw;
+  height: 15vw;
 }
 
 .checklist {
@@ -120,6 +133,42 @@ section {
   background-color: #3e4a52;
   border-radius: 3px;
   padding: .4em .5em;
+}
+
+/* Project List */
+
+.project-section {
+  position: relative;
+  top: 0;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-section:hover {
+  cursor: pointer;
+}
+
+.project-title {
+  padding: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: var(--section-one-color);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -1em;
+  z-index: 3;
+  position: relative;
+  top: 0;
+  vertical-align: top;
+}
+
+.project-image {
+  height: calc(20vw - 40px);
+  z-index: 2;
+  position: relative;
+  border-radius: 10px;
 }
 
 /* Socials */
