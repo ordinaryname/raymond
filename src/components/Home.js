@@ -106,6 +106,7 @@ class Home extends React.Component {
             <img className="stackoverflow_activity" src="https://raymond-static.s3-us-west-2.amazonaws.com/icloud_downloads/stackoverflow_activity.png" alt="stackoverflow activity" />
           </section>
           <section className="section firstSection">
+            <h2 className="section-title">Projects</h2>
             <div className="section-item">
               <div className="project-section">
                 <span className="project-title">TicTacToe</span>

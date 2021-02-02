@@ -1,7 +1,7 @@
 :root {
-  --header-section-color: #262c3c;
-  --top-section-color: #333a50;
-  --section-one-color: #cccccc;
+  --header-section-color: #1b1b1b;
+  --top-section-color: #2d2d2d;
+  --section-one-color: #dddddd;
 }
 
 /* Content */
@@ -62,11 +62,17 @@ section {
 }
 
 .firstSection {
-  background: linear-gradient(0deg, #eeeeee, var(--section-one-color) 5% 95%, #eeeeee);
+  background-color: var(--section-one-color);
 }
 
 .secondSection {
   background: #2d2d2d;
+}
+
+.section-title {
+  text-align: center;
+  padding: 1em;
+  font-size: 2.4em;
 }
 
 /* Section Items */
