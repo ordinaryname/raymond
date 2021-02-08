@@ -87,14 +87,13 @@
 
 .footer {
   margin-top: 2vh;
-  padding: 2vh 0;
-  width: 100%;
+  padding: 3vh 20vw;
   background-color: #dddddd;
   box-shadow: inset 0 10px 10px -5px #555555;
 }
 
 .footer-item {
-  padding: 5px 0;
+  padding: 0.5em 0;
   width: 100%;
   color: #555555;
   font-size: 1em;
@@ -108,5 +107,57 @@
 
 .footer-link:hover {
   cursor: pointer;
-  color: #077077;
+  color: #0770aa;
+}
+
+.footer-sections {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.footer-section {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.footer-section-center {
+  text-align: left;
+  display: inline-flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.footer-section-title {
+  font-weight: bolder;
+  padding: 0.4em;
+}
+
+.footer-section-item {
+  flex-grow: 1;
+  padding: 0.4em;
+}
+
+.footer-section-item:hover {
+  cursor: pointer;
+  color: #0770aa;
+}
+
+.instagram_logo, .stackoverflow_logo, .github_logo, .linkedin_logo {
+  flex-grow: 1;
+  max-height: 1em;
+  max-width: 1.2em;
+  height: auto;
+  width: auto;
+  padding: 0.4em;
+}
+
+.instagram_logo:hover, .stackoverflow_logo:hover, .github_logo:hover, .linkedin_logo:hover {
+  cursor: pointer;
+}
+
+.footer-bottom {
+  padding-top: 1em;
 }
