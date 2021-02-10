@@ -1,6 +1,7 @@
 :root {
   --header-section-color: #1b1b1b;
   --top-section-color: #2d2d2d;
+  --table-row-color: #9f9f9f;
   --section-one-color: #dddddd;
 }
 
@@ -20,7 +21,6 @@
 }
 
 .ml16 {
-  color: white;
   padding: 40px 0;
   font-weight: 800;
   font-size: 2em;
@@ -36,6 +36,7 @@
 .ml16 .letter {
   display: inline-block;
   line-height: 1em;
+  color: white;
 }
 
 .vertical-align {
@@ -56,7 +57,7 @@
 section {
   width: 100%;
   min-height: 20vh;
-  padding: 20vh 0;
+  padding: 10vh 0;
   vertical-align: middle;
   text-align: center;
 }
@@ -66,13 +67,17 @@ section {
 }
 
 .secondSection {
-  background: #2d2d2d;
+  background-color: #2d2d2d;
+}
+
+.thirdSection {
+  background-color: #ffffff;
 }
 
 .section-title {
   text-align: center;
-  padding: 1em;
   font-size: 2.4em;
+  margin-bottom: 1.2em;
 }
 
 /* Section Items */
@@ -84,35 +89,35 @@ section {
   vertical-align: middle;
 }
 
-.bookIcon {
-  fill: #583415;
-  width: 15vw;
-  height: 15vw;
+.techgrid {
+  display: inline-grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
 }
 
-.checklist {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
+.techgrid-headers {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 2em;
+  font-weight: bolder;
+  color: var(--section-one-color);
+  background-color: var(--top-section-color);
+  border-bottom: 6px double var(--section-one-color);
 }
 
-.checklist-item {
-  display: flex;
-  flex-direction: column;
-  flex-flow: wrap;
-  align-content: center;
-  color: #555555;
+.techgrid-items {
+  width: 100%;
+  padding: 0.5em 0;
   font-size: 1.5em;
-  text-align: left;
-  flex-grow: 1;
 }
 
-.text {
-  height: 50px;
-  line-height: 50px;
-  float: left;
-  margin-left: 10px;
+.frameworks {
+  border-left: 2px solid #555555;
+  border-right: 2px solid #555555;
 }
+
+/* Stack Overflow Section*/
 
 .stackoverflow_activity {
   width: 70vw;
@@ -175,68 +180,4 @@ section {
   z-index: 2;
   position: relative;
   border-radius: 10px;
-}
-
-/* Socials */
-
-.social-icons {
-  text-align: center;
-  margin: 5vh auto;
-}
-
-.instagram, .stackoverflow, .github {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -50px;
-  width: 70px;
-  height: 70px;
-  padding: 15px;
-  background-color: none;
-  z-index: 3;
-  position: relative;
-  border-radius: 35px;
-  border: none;
-}
-
-.instagram_thumbnail, .stackoverflow_thumbnail, .github_thumbnail {
-  display: inline-block;
-  vertical-align: top;
-  width: 25vw;
-  height: 20vw;
-  margin: 0px 1vw;
-  padding: 0;
-  background-color: none;
-  overflow: hidden;
-  position: relative;
-  top: 0;
-  transition: top 0.3s;
-}
-
-.instagram_thumbnail:hover, .stackoverflow_thumbnail:hover, .github_thumbnail:hover {
-  cursor: pointer;
-  position: relative;
-  top: 20px;
-}
-
-.social_img {
-  height: calc(20vw - 40px);
-  position: relative;
-  z-index: 2;
-}
-
-.action {
-  position: fixed;
-  bottom: 5vh;
-  right: 5vw;
-  padding: 20px;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 2px;
-  border: none;
-  border-radius: 10px;
-  z-index: 2;
-}
-
-.action:hover {
-
 }
