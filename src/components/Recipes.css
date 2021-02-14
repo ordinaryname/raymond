@@ -1,0 +1,20 @@
+.recipes-hompage {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.recipes-header {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.recipes-header2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.category {
+  border-left: 2px solid #555555;
+  border-bottom: 2px solid #555555;
+  text-align: center;
+  vertical-align: middle;
+}

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 
 import Home from './components/Home';
 import TicTacToe from './components/TicTacToe';
+import Recipes from './components/Recipes';
 import Error from './components/Error';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <Switch>
             <Route path="/" component={Home} exact/>
             <Route path='/TicTacToe' component={TicTacToe} exact/>
+            <Route path='/Recipes' component={Recipes} exact/>
             <Route component={Error} />
           </Switch>
         </BrowserRouter>
