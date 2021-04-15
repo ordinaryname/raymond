@@ -7,12 +7,27 @@ class Recipe_List extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      error: null,
       recipes:{},
+      recipes: [],
     };
   }
 
   getRecipes = () => {
-
+    fetch()
+    .then(res => res.json())
+    .then(
+      (result) => {
+        this.setState({
+          items: result.items
+        });
+      },
+      (error) => {
+        this.setState({
+          error
+        });
+      }
+    );
   }
 
   recipeList = () => {
