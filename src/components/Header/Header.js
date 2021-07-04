@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import '../../App.css';
 
 class Header extends React.Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class Header extends React.Component {
             top: position_y,
             left: position_x,
           }}>
-          <Link className="project-menu-item" to="/TicTacToe">{'Tic Tac Toe Plus'}</Link>
+          <a className="project-menu-item" href="https://raymondmutyaba.com/TicTacToe">{'Tic Tac Toe Plus'}</a>
         </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
-import linkedin_logo from './images/LI-In-Bug.png';
+import '../../App.css';
+import linkedin_logo from '../images/LI-In-Bug.png';
 
 class Footer extends React.Component {
   render() {

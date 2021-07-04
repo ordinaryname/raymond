@@ -1,7 +1,4 @@
 import React from 'react';
-import '../App.css';
-import Header from './Header';
-import Footer from './Footer';
 
 class Recipe_List extends React.Component {
   constructor(props) {
@@ -38,11 +35,9 @@ class Recipe_List extends React.Component {
   render() {
     return(
       <div className="body">
-        <Header />
         <div className="recipe_list">
           {this.recipeList}
         </div>
-        <Footer />
       </div>
     );
   }

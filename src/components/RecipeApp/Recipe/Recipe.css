@@ -1,0 +1,42 @@
+/* Content */
+
+.recipe_container {
+  width: 70vw;
+  min-height: 70vh;
+  margin: calc(40px + 1.1em) auto 0 auto;
+  background: #ffffff;
+  padding: 3vh 5vw;
+  box-shadow:
+    10px 0 10px #dddddd,
+    -10px 0 10px #dddddd;
+}
+
+.recipe_name {
+  padding: 2vh 0;
+  font-size: 2em;
+}
+
+.recipe_author {
+  font-size: 1.1em;
+}
+
+.recipe_calories {
+  font-size: 1.1em;
+}
+
+.recipe_description {
+  padding: 2vh 0;
+  font-size: 1.1em;
+}
+
+.ingredients_header {
+  padding: 2vh 0;
+  font-size: 1.5em;
+}
+
+.recipe_ingredients {
+  padding: 1vh 0;
+  font-size: 1.1em;
+  display: flex;
+  flex-flow: column wrap;
+}

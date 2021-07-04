@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Error.css';
-import lion from "./images/nothing_to_see_here.jpg";
+import lion from "../images/nothing_to_see_here.jpg";
 
 class Error extends Component {
 

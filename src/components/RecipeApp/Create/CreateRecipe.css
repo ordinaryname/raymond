@@ -1,0 +1,67 @@
+.recipeForm {
+  width: 70vw;
+  min-height: 70vh;
+  margin: calc(40px + 1.1em) auto 0 auto;
+  background: #ffffff;
+  padding: 3vh 5vw;
+  box-shadow:
+    10px 0 10px #dddddd,
+    -10px 0 10px #dddddd;
+}
+
+.createRecipeTitle {
+  padding: 2vh 0;
+  font-size: 2em;
+}
+
+.singleLineInput {
+  width: 70%;
+  margin: 10px auto;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+.singleLineInput:invalid {
+  background-color: #ffa6a6;
+}
+
+.singleLineInput:placeholder {
+  background-color: white;
+}
+
+.multiLineInput {
+  width: 70%;
+  margin: 10px auto;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.ingredient {
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em;
+  background-color: #2cc973;
+  border-radius: 0.25em;
+  color: white;
+  margin: 1em;
+}
+
+.submit {
+  display: block;
+  padding: 1em;
+  font-size: 1.2em;
+  border-radius: 1em;
+  margin: 10px 0;
+  background: #32a852;
+  color: white;
+  border: none;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background: #3ac25f;
+}

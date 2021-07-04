@@ -1,33 +1,25 @@
 import React from 'react';
-import '../App.css';
 import './Home.css';
-import Header from './Header';
-import Footer from './Footer';
 import { Link } from "react-router-dom";
-import profile_image from './images/raymond_selfie.jpg';
+import profile_image from '../images/raymond_selfie.jpg';
 import anime from 'animejs';
 
 class Home extends React.Component {
 
   componentDidMount() {
-    // Wrap every letter in a span
-    var textWrapper = document.querySelector('.ml16');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
     anime.timeline({loop: false}).add({
-      targets: '.ml16 .letter',
-      translateY: [-100,0],
+      targets: '.ml16 .word',
+      translateX: [-300,0],
       easing: "easeOutExpo",
-      duration: 1400,
-      delay: (el, i) => 30 * i
+      duration: 2800,
+      delay: (el, i) => 100 * i
     });
-  }
 
-  componentWillUnmount() {
-    // fix warning: Can't perform a React state update on an unmounted component
-    this.setState = (state, callback) => {
-      return;
-    };
+    //Load certification badges
+    const script = document.createElement('script');
+    script.src = "https://cdn.youracclaim.com/assets/utilities/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
   }
 
   placeholderHtml = () => {
@@ -44,11 +36,14 @@ class Home extends React.Component {
   render() {
     return(
       <div className="body">
-        <Header/>
         <div className="content">
           <div className="title">
-            <p className="ml16">Raymond Is Coding</p>
-            <div className="vertical-align"><img className="profile_image" src={profile_image} alt="profile"/></div>
+            <div className="ml16">
+              <span className="word w1">Build()</span>
+              <span className="word w2">Test()</span>
+              <span className="word w3">Deploy()</span>
+              <img className="profile_image" src={profile_image} alt="profile"/>
+            </div>
           </div>
           <section className="section firstSection">
             <div className="techgrid">
@@ -87,7 +82,6 @@ class Home extends React.Component {
             <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bfaad651-4208-4776-9073-cf8908f9a5a6" data-share-badge-host="https://www.youracclaim.com"></div>
           </section>
         </div>
-        <Footer/>
       </div>
     )
   }

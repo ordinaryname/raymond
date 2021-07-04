@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
 import './TicTacToe.css'
-import Header from './Header';
-import Footer from './Footer';
 import anime from 'animejs';
 
 class TicTacToe extends Component {
@@ -314,7 +311,6 @@ class TicTacToe extends Component {
   render() {
     return(
       <div className="Home">
-        <Header/>
         <div className="box">
           <div className="gameOverPanel" ref={(element) => {this.gameOverPanel = element;}}>
           {/* Show game over menu after turn 80 */}
@@ -331,6 +327,7 @@ class TicTacToe extends Component {
             </div>
           </div>
           <div className="gameContainer">
+            <h2 className="gameTitle">Tic Tac Toe</h2>
             <div className="container">
               <div className="scoreboard">
                 <div className="score selectedPlayer" ref={(element) => {this.xScoreDiv = element;}}>X : {this.xScore}</div><div className="score" ref={(element) => {this.oScoreDiv = element;}}>O : {this.oScore}</div>
@@ -342,7 +339,6 @@ class TicTacToe extends Component {
             </div>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }
