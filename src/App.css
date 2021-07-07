@@ -1,12 +1,40 @@
+:root {
+  --header-section-color: #1b1b1b;
+  --top-section-color: #2d2d2d;
+  --table-row-color: #9f9f9f;
+  --section-one-color: #dddddd;
+  --button-color: #2cc973;
+  --buttonHover-color: #54ffa1;
+  --fontDefault-color: #555555;
+}
+
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
-  color: #333333;
+  color: var(--fontDefault-color);
 }
 
 a {
   text-decoration: none;
+}
+
+/* Common */
+
+.ingredient {
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em;
+  background-color: var(--button-color);
+  border-radius: 1.5em;
+  color: white;
+  margin: 0 1em;
+  border: none;
+}
+
+.ingredient:hover {
+  background-color: var(--buttonHover-color);
 }
 
 /* Header */
@@ -155,7 +183,7 @@ a {
   max-width: 1.2em;
   height: auto;
   width: auto;
-  padding: 0.4em;
+  margin: 0.4em;
 }
 
 .instagram_logo:hover, .stackoverflow_logo:hover, .github_logo:hover, .linkedin_logo:hover {

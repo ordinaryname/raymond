@@ -40,16 +40,6 @@
   color: red;
 }
 
-.ingredient {
-  display: inline-block;
-  font-size: 1em;
-  padding: 1em;
-  background-color: #2cc973;
-  border-radius: 0.25em;
-  color: white;
-  margin: 1em;
-}
-
 .submit {
   display: block;
   padding: 1em;

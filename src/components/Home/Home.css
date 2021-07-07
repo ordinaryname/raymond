@@ -1,15 +1,8 @@
-:root {
-  --header-section-color: #1b1b1b;
-  --top-section-color: #2d2d2d;
-  --table-row-color: #9f9f9f;
-  --section-one-color: #dddddd;
-}
-
 /* Content */
 
 .content {
   text-align: center;
-  width: 100%;
+  width: 100vw;
   margin: calc(40px + 1.1em) 0 0 0;
 }
 

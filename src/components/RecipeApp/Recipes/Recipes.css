@@ -7,33 +7,131 @@
   margin: calc(40px + 1.5em) 0 0 0;
   place-items: stretch;
 }
-.recipes-header {
+
+/* Header */
+
+.recipesBannerImageContainer {
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
-  text-align: center;
-  padding: 8vh;
+  width: 100%;
+  padding: 5vw 25vw;
+  background-image: url("https://gothammag.com/get/files/image/galleries/outdoor-dining-lee-myungseong-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: white;
 }
-.recipes-header2 {
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 1;
+
+.recipes-header {
   text-align: center;
-  padding-bottom: 8vh;
-  border-bottom: 2px solid #555555;
+  padding: 2vw 0;
+  color: var(--button-color);
+  background-color: rgba(255, 255, 255, .88);
+  border-bottom: 2px solid var(--button-color);
+}
+
+.recipes-header2 {
+  text-align: center;
+  padding: 2vw;
+  font-size: 1.2em;
+  color: var(--fontDefault-color);
+  background-color: rgba(255, 255, 255, .88);
+  width: 50vw;
+}
+
+/* Categories */
+
+.categoryBar {
+  margin: 3vw auto;
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 1;
+  text-align: center;
 }
 
 .category {
-  border-left: 2px solid #555555;
-  border-bottom: 2px solid #555555;
-  height: 50vw;
-  text-align: center;
-  background-color: none;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em;
+  background-color: transparent;
+  border-radius: 1.5em;
+  color: var(--fontDefault-color);
+  margin: 0 1em;
+  border: 2px solid var(--button-color);
 }
 
-.category:hover {
-  background-color: #cccccc;
+.selectedCategory, .category:hover {
+  background-color: var(--button-color);
+  color: white;
 }
 
-.recipes-category-label {
+.categoryTitle {
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 1;
+}
+
+/* List of Recipes */
+
+.recipeList {
+  grid-column: 1 / span 2;
+  grid-row: 5 / span 1;
+  display: flex;
+  flex-direction: column;
+  padding: 4vw 0;
+}
+
+.listItem {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 15vw 65vw;
+  grid-template-rows: 9vw 6vw;
+  grid-template-areas:
+    "image name"
+    "image ingredients";
+  background-color: white;
+  width: 80vw;
+  margin: 2vw auto;
+  box-shadow:
+    10px 0 10px #dddddd,
+    -10px 0 10px #dddddd;
+}
+
+.listItem:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--button-color);
+}
+
+.recipeImage {
+  grid-area: image;
+}
+
+.listItemName {
+  grid-area: name;
   width: 100%;
-  line-height: 50vw;
+  font-size: 2.5em;
+  padding: 0 0.5em;
+}
+
+/* Loading Animation */
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: calc(25vw) 0;
+  }
+  100% {
+    background-position: calc(68vw) 0;
+  }
+}
+
+.defaultlistItemName {
+  width: 70%;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: fff;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+}
+
+.ingredientList {
+  grid-area: ingredients;
+  align-self: start;
 }

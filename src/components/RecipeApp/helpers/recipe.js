@@ -5,7 +5,7 @@ export default class Recipe {
     }
   }
 
-  static categories = ['Breakfast', 'Lunch', 'Dinner', 'Snacks', 'Dessert'];
+  static categories = ['Featured', 'Breakfast', 'Lunch', 'Dinner', 'Snacks', 'Dessert'];
 
   static async getRecipe(id) {
     let recipe = sessionStorage.getItem('recipe_' + String(id));
@@ -55,6 +55,10 @@ export default class Recipe {
     if(recipe instanceof Recipe) {
 
     }
+  }
+
+  static async getList(category) {
+    return '';
   }
 
   set _name(name) {

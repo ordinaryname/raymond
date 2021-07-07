@@ -9,8 +9,8 @@ class Footer extends React.Component {
         <div className="footer-sections">
           <div className="footer-section">
             <div className="footer-section-center">
-              <h3 className="footer-section-title">More Info</h3>
-              <span className="footer-section-item footer-link">Contact Me</span>
+              <h3 className="footer-section-title">Contact Me</h3>
+              <span className="footer-section-item footer-link">raymond@raymondmutyaba.com</span>
               <span className="footer-section-item footer-link">Privacy Policy</span>
               <span className="footer-section-item footer-link">Terms of Use</span>
             </div>
